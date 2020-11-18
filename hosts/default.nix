@@ -75,6 +75,9 @@ let
         in
         flakeModules ++ [ core global local home-manager overrides qute ];
 
+      extraArgs = {
+        inherit system;
+      };
     };
 
   hosts = recImport {
